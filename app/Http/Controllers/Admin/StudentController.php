@@ -14,7 +14,7 @@ class StudentController extends Controller
     public function index()
     {
         $students = Student::all();
-        return view('admin.student.index', compact('students'));
+        return view  ('admin.student.index', compact('students'));
     }
 
     /**
@@ -76,8 +76,9 @@ class StudentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Student $student)
     {
-        //
+        $student->delete();
+        return redirect()->route('admin.students.index')->with('success', 'Data siswa berhasil di hapus');
     }
 }
