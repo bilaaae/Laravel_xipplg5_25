@@ -15,7 +15,7 @@
         <th>Nama Lengkap</th>
         <th>Jenis Kelamin</th>
         <th>NISN</th>
-        <th>Aksi</th>
+        <th>Aksi</th> 
       </tr>
     </thead>
     <tbody>
