@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Keuangan extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'student_id',
+        'bulan',
+        'jumlah',
+        'status',
+        'tanggal_bayar',
+    ];
+
+    public function student()
+    {
+        return $this->belongsTo(Student::class);
+    }
 }
+

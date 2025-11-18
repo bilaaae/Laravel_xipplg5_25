@@ -16,3 +16,9 @@ class Student extends Model
         'nisn',
     ];
 }
+
+public function keuangans()
+    {
+        return $this->hasMany(Keuangan::class);
+    }
+
