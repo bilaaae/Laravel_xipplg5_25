@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
   <h1 class="mb-4">Data Keuangan SPP</h1>
-  <a href="{{ route('keuangans.create') }}" class="btn btn-primary mb-3">+ Tambah Pembayaran</a>
+  <a href="{{ route('admin.keuangans.create') }}" class="btn btn-primary mb-3">+ Tambah Pembayaran</a>
 
   <table class="table table-bordered">
     <thead>
@@ -29,9 +29,9 @@
         <td>{{ $k->status }}</td>
         <td>{{ $k->tanggal_bayar ?? '-' }}</td>
         <td>
-          <a href="{{ route('keuangans.show', $k->id) }}" class="btn btn-info btn-sm">Detail</a>
-          <a href="{{ route('keuangans.edit', $k->id) }}" class="btn btn-warning btn-sm">Edit</a>
-          <form action="{{ route('keuangans.destroy', $k->id) }}" method="POST" class="d-inline">
+          <a href="{{ route('admin.keuangans.show', $k->id) }}" class="btn btn-info btn-sm">Detail</a>
+          <a href="{{ route('admin.keuangans.edit', $k->id) }}" class="btn btn-warning btn-sm">Edit</a>
+          <form action="{{ route('admin.keuangans.destroy', $k->id) }}" method="POST" class="d-inline">
             @csrf
             @method('DELETE')
             <button class="btn btn-danger btn-sm" onclick="return confirm('Hapus data ini?')">Hapus</button>

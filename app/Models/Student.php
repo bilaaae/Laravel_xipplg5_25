@@ -15,10 +15,10 @@ class Student extends Model
         'jenis_kelamin',
         'nisn',
     ];
-}
+
 
 public function keuangans()
     {
         return $this->hasMany(Keuangan::class);
     }
-
+}

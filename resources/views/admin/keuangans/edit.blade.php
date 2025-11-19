@@ -5,7 +5,7 @@
 @section('content')
     <div class="container">
         <h1>Edit Data Pembayaran</h1>
-        <form action="{{ route('keuangans.update', $keuangan->id) }}" method="POST">
+        <form action="{{ route('admin.keuangans.update', $keuangan->id) }}" method="POST">
             @csrf
             @method('PUT')
             <div class="mb-3">

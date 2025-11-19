@@ -32,7 +32,7 @@ class KeuanganController extends Controller
         ]);
 
         Keuangan::create($request->all());
-        return redirect()->route('keuangans.index')->with('success', 'Data keuangan berhasil ditambahkan');
+        return redirect()->route('admin.keuangans.index')->with('success', 'Data keuangan berhasil ditambahkan');
     }
 
     public function show($id)
@@ -61,13 +61,13 @@ class KeuanganController extends Controller
         $keuangan = Keuangan::findOrFail($id);
         $keuangan->update($request->all());
 
-        return redirect()->route('keuangans.index')->with('success', 'Data keuangan berhasil diperbarui');
+        return redirect()->route('admin.keuangans.index')->with('success', 'Data keuangan berhasil diperbarui');
     }
 
     public function destroy($id)
     {
         $keuangan = Keuangan::findOrFail($id);
         $keuangan->delete();
-        return redirect()->route('keuangans.index')->with('success', 'Data keuangan berhasil dihapus');
+        return redirect()->route('admin.keuangans.index')->with('success', 'Data keuangan berhasil dihapus');
     }
 }

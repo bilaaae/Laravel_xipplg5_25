@@ -1,9 +1,10 @@
+@extends('layouts.admin')
 @section('title', 'Tambah Keuangan')
 
 @section('content')
     <div class="container">
         <h1>Tambah Pembayaran SPP</h1>
-        <form action="{{ route('keuangans.store') }}" method="POST">
+        <form action="{{ route('admin.keuangans.store') }}" method="POST">
             @csrf
             <div class="mb-3">
                 <label>Nama Siswa</label>

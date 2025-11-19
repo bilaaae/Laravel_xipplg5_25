@@ -27,6 +27,6 @@
       <td>{{ $keuangan->tanggal_bayar ?? '-' }}</td>
     </tr>
   </table>
-  <a href="{{ route('keuangans.index') }}" class="btn btn-secondary">Kembali</a>
+  <a href="{{ route('admin.keuangans.index') }}" class="btn btn-secondary">Kembali</a>
 </div>
 @endsection
